@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.*;
 
 class TrainApp{
 public static void main(String args[]){
