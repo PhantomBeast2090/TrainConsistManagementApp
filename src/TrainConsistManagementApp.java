@@ -1,22 +1,20 @@
 import java.util.*;
 import java.util.stream.*;
 
-class Bogie{
-String name;int cap;
-Bogie(String n,int c){name=n;cap=c;}
-}
-
 class TrainApp{
-public static void main(String[] args){
+public static void main(String args[]){
 
 System.out.println("=== Train Consist Management App ===");
 
-Set<String> s=new HashSet<>();
+LinkedList<String> l=new LinkedList<>();
 
-s.add("BG101");s.add("BG102");
-s.add("BG101");s.add("BG103");s.add("BG104");s.add("BG102");
+l.add("Engine");l.add("Sleeper");l.add("AC");l.add("Cargo");l.add("Guard");
 
-System.out.println(s);
+l.add(2,"Pantry");
+
+l.removeFirst();l.removeLast();
+
+System.out.println("final train: "+l);
 
 }
 }
