@@ -1,4 +1,10 @@
 import java.util.*;
+import java.util.stream.*;
+
+class Bogie{
+String name;int cap;
+Bogie(String n,int c){name=n;cap=c;}
+}
 
 class TrainApp{
 public static void main(String[] args){
