@@ -7,16 +7,16 @@ Bogie(String n,int c){name=n;cap=c;}
 }
 
 class TrainApp{
-public static void main(String args[]){
+public static void main(String[] args){
 
 System.out.println("=== Train Consist Management App ===");
 
-List<Bogie> l=new ArrayList<>();
-l.add(new Bogie("Sleeper",72));l.add(new Bogie("AC Chair",56));l.add(new Bogie("First Class",40));
+Set<String> s=new HashSet<>();
 
-List<Bogie> filtered=l.stream().filter(b->b.cap>60).collect(Collectors.toList());
+s.add("BG101");s.add("BG102");
+s.add("BG101");s.add("BG103");s.add("BG104");s.add("BG102");
 
-for(Bogie x:filtered)System.out.println(x.name+" "+x.cap);
+System.out.println(s);
 
 }
 }
