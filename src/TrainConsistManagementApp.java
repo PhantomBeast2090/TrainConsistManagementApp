@@ -1,16 +1,22 @@
 import java.util.*;
+import java.util.stream.*;
+
+class Bogie{
+String name;int cap;
+Bogie(String n,int c){name=n;cap=c;}
+}
 
 class TrainApp{
 public static void main(String args[]){
 
 System.out.println("=== Train Consist Management App ===");
 
-HashMap<String,Integer> m=new HashMap<>();
+List<Bogie> l=new ArrayList<>();
+l.add(new Bogie("Sleeper",72));l.add(new Bogie("AC Chair",56));l.add(new Bogie("First Class",40));
 
-m.put("Sleeper",72);m.put("AC Chair",60);m.put("First Class",40);
+List<Bogie> filtered=l.stream().filter(b->b.cap>60).collect(Collectors.toList());
 
-for(Map.Entry<String,Integer> e:m.entrySet())
-System.out.println(e.getKey()+" -> "+e.getValue());
+for(Bogie x:filtered)System.out.println(x.name+" "+x.cap);
 
 }
 }
