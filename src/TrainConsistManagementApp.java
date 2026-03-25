@@ -5,9 +5,11 @@ public static void main(String args[]){
 
 System.out.println("=== Train Consist Management App ===");
 
-List<String> bogies=new ArrayList<>();
+Set<String> f=new LinkedHashSet<>();
 
-System.out.println("initial bogie count: "+bogies.size());
+f.add("Engine");f.add("Sleeper");f.add("Cargo");f.add("Guard");f.add("Sleeper");
+
+System.out.println(f);
 
 }
 }
