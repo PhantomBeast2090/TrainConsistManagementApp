@@ -1,13 +1,21 @@
-import java.util.*;
+// Implementing UC3 using HashSet for tracking unique bogie IDs
+import java.util.HashSet;
+import java.util.Set;
 
-class TrainApp{
-public static void main(String args[]){
+public class TrainConsistManagementApp {
+    private Set<String> uniqueBogieIDs;
 
-System.out.println("=== Train Consist Management App ===");
+    public TrainConsistManagementApp() {
+        uniqueBogieIDs = new HashSet<>();
+    }
 
-List<String> bogies=new ArrayList<>();
+    public void addBogie(String bogieID) {
+        uniqueBogieIDs.add(bogieID);
+    }
 
-System.out.println("initial bogie count: "+bogies.size());
+    public boolean hasBogie(String bogieID) {
+        return uniqueBogieIDs.contains(bogieID);
+    }
 
-}
+    // Other methods related to train consist management...
 }
